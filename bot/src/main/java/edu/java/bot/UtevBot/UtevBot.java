@@ -28,7 +28,6 @@ public class UtevBot  implements UpdatesListener {
     @Override
     public int process(List<Update> list) {
         for (var update : list) {
-            //System.out.println(update.message().chat());
             bot.execute(responseService.getAnswer(update));
         }
         return UpdatesListener.CONFIRMED_UPDATES_ALL;
